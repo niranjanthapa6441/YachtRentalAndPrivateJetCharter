@@ -1,0 +1,24 @@
+file:
+  upload-dir: images/restaurants/
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/yachtrentalandprivatejetcharter
+    username: postgres
+    password: 6441
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQL81Dialect
+    show-sql: false
+    open-in-view: false
+  servlet:
+    multipart:
+      max-file-size: 3MB
+      max-request-size: 3MB
+server:
+  servlet:
+    context-path: /cloudKitchen/api/v1
+  port: 8080
