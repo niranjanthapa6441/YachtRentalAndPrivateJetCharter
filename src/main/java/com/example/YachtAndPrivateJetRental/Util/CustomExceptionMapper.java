@@ -31,8 +31,6 @@ import java.util.HashMap;
 @Slf4j
 @ControllerAdvice
 public class CustomExceptionMapper extends ResponseEntityExceptionHandler {
-//    private static final String internalServerErrorMsg = "Something went wrong. Please try again later";
-
     @ExceptionHandler(CustomException.class)
     public final ResponseEntity<Object> restExceptionHandler(CustomException restException) {
         log.error("Exception handling:: " + restException.getMessage());

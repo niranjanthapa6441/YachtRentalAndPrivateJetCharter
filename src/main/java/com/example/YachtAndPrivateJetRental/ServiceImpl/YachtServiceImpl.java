@@ -5,4 +5,5 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class YachtServiceImpl implements YachtService {
+
 }

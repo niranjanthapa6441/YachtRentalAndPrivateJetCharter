@@ -1,8 +1,7 @@
 package com.example.YachtAndPrivateJetRental.Model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import com.example.YachtAndPrivateJetRental.Enums.FleetStatus;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
@@ -11,4 +10,30 @@ import lombok.Data;
 public class Yacht {
     @Id
     private String id;
+
+    @Column(nullable = false)
+    private String name;
+
+    @ManyToOne
+    @JoinColumn(name = "manufacturer_id",referencedColumnName = "id",nullable = false)
+    private Manufacturer manufacturer;
+
+    @ManyToOne
+    @JoinColumn(name = "category_id",referencedColumnName = "id",nullable = false)
+    private Category category;
+
+    @Column(nullable = false)
+    private double maximumRange;
+
+    @Column(nullable = false)
+    private double fuelConsumption;
+
+    @Column(nullable = false)
+    private double maxSpeed;
+
+    @Column(nullable = false)
+    private double length;
+
+    @Column(nullable = false)
+    private FleetStatus status;
 }

@@ -1,8 +1,6 @@
 package com.example.YachtAndPrivateJetRental.Model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
@@ -11,4 +9,12 @@ import lombok.Data;
 public class PackageYacht {
     @Id
     private String id;
+
+    @ManyToOne
+    @JoinColumn(name = "yacht_id", referencedColumnName = "id",nullable = false)
+    private  Yacht yacht;
+    @ManyToOne
+    @JoinColumn(name = "package_id", referencedColumnName = "id",nullable = false)
+    private  Package aPackage;
+
 }
