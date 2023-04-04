@@ -3,12 +3,15 @@ package com.example.YachtAndPrivateJetRental.Model;
 import com.example.YachtAndPrivateJetRental.Enums.RentalType;
 import jakarta.persistence.*;
 import lombok.Data;
+import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Data
 @Table(name = "custom_reservation_yacht")
 public class CustomReservationYacht {
     @Id
+    @GeneratedValue(generator="system-uuid")
+    @GenericGenerator(strategy = "uuid",name="system-uuid")
     private String id;
 
     @ManyToOne

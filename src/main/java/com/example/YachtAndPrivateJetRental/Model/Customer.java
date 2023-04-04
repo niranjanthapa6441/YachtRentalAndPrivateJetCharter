@@ -1,10 +1,8 @@
 package com.example.YachtAndPrivateJetRental.Model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
+import org.hibernate.annotations.GenericGenerator;
 
 import java.util.Date;
 
@@ -13,6 +11,8 @@ import java.util.Date;
 @Table(name = "customer")
 public class Customer {
     @Id
+    @GeneratedValue(generator="system-uuid")
+    @GenericGenerator(strategy = "uuid",name="system-uuid")
     private String id;
 
     @Column(name = "first_name", nullable = false)

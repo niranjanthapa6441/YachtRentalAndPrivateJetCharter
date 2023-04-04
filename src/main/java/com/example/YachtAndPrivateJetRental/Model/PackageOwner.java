@@ -7,7 +7,16 @@ import lombok.Data;
 @Entity
 @Table(name = "package_owner")
 public class PackageOwner {
+    @SequenceGenerator(
+            name = "package_owner_id_sequence",
+            sequenceName = "package_owner_sequence",
+            allocationSize = 1
+    )
     @Id
+    @GeneratedValue(
+            strategy = GenerationType.IDENTITY,
+            generator="package_owner_sequence"
+    )
     private String id;
 
     @ManyToOne

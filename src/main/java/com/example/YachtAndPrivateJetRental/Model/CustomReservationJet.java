@@ -2,12 +2,15 @@ package com.example.YachtAndPrivateJetRental.Model;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.hibernate.annotations.GenericGenerator;
 
 @Entity
 @Data
 @Table(name = "custom_reservation_jet")
 public class CustomReservationJet {
     @Id
+    @GeneratedValue(generator="system-uuid")
+    @GenericGenerator(strategy = "uuid",name="system-uuid")
     private String id;
 
     @ManyToOne

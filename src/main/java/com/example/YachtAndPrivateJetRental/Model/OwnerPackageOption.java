@@ -8,7 +8,16 @@ import lombok.Data;
 @Entity
 @Table(name = "owner_package_option")
 public class OwnerPackageOption {
+    @SequenceGenerator(
+            name = "owner_package_option_id_seq",
+            sequenceName = "owner_package_option_sequence",
+            allocationSize = 1
+    )
     @Id
+    @GeneratedValue(
+            strategy = GenerationType.IDENTITY,
+            generator="owner_package_option_sequence"
+    )
     private String id;
 
     @ManyToOne

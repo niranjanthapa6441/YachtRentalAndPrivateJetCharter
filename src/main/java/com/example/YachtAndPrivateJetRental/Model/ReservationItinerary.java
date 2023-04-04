@@ -2,6 +2,7 @@ package com.example.YachtAndPrivateJetRental.Model;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.hibernate.annotations.GenericGenerator;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -11,6 +12,8 @@ import java.time.LocalTime;
 @Data
 public class ReservationItinerary {
     @Id
+    @GeneratedValue(generator="system-uuid")
+    @GenericGenerator(strategy = "uuid",name="system-uuid")
     private String id;
 
     @ManyToOne

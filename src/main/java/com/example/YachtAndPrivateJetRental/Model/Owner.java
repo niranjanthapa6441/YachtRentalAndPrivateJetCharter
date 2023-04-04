@@ -9,7 +9,16 @@ import java.util.Date;
 @Data
 @Table(name = "owner")
 public class Owner {
+    @SequenceGenerator(
+            name = "owner_id_seq",
+            sequenceName = "owner_sequence",
+            allocationSize = 1
+    )
     @Id
+    @GeneratedValue(
+            strategy = GenerationType.IDENTITY,
+            generator="owner_sequence"
+    )
     private String id;
 
     @Column(nullable = false)

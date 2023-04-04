@@ -9,7 +9,16 @@ import org.checkerframework.checker.units.qual.C;
 @Data
 @Table(name = "package")
 public class Package {
+    @SequenceGenerator(
+            name = "package_id_sequence",
+            sequenceName = "package_sequence",
+            allocationSize = 1
+    )
     @Id
+    @GeneratedValue(
+            strategy = GenerationType.IDENTITY,
+            generator="package_sequence"
+    )
     private String id;
 
     @ManyToOne

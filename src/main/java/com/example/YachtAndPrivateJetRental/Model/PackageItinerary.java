@@ -7,7 +7,16 @@ import lombok.Data;
 @Table(name = "package_itinerary")
 @Data
 public class PackageItinerary {
+    @SequenceGenerator(
+            name = "package_itinerary_id_seq",
+            sequenceName = "package_itinerary_sequence",
+            allocationSize = 1
+    )
     @Id
+    @GeneratedValue(
+            strategy = GenerationType.IDENTITY,
+            generator="package_itinerary_sequence"
+    )
     private String id;
 
     @ManyToOne

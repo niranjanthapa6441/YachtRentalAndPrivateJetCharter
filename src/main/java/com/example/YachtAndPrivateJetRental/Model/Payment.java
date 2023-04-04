@@ -9,7 +9,6 @@ import java.time.LocalDate;
 @Data
 @Table(name = "payment")
 public class Payment {
-    @Id
     private String id;
 
     @Column(nullable = false)

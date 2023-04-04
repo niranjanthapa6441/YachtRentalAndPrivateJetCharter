@@ -7,7 +7,16 @@ import lombok.Data;
 @Data
 @Table(name = "image_jet")
 public class ImageJet {
+    @SequenceGenerator(
+            name = "image_jet_id_seq",
+            sequenceName = "image_jet_sequence",
+            allocationSize = 1
+    )
     @Id
+    @GeneratedValue(
+            strategy = GenerationType.IDENTITY,
+            generator="image_jet_sequence"
+    )
     private String id;
 
     @ManyToOne

@@ -7,7 +7,16 @@ import lombok.Data;
 @Data
 @Table(name = "baggage_policy")
 public class BaggagePolicy {
+    @SequenceGenerator(
+            name = "baggage_policy_id_seq",
+            sequenceName = "baggage_policy_sequence",
+            allocationSize = 1
+    )
     @Id
+    @GeneratedValue(
+            strategy = GenerationType.IDENTITY,
+            generator="baggage_policy_sequence"
+    )
     private String id;
 
     @ManyToOne

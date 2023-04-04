@@ -10,7 +10,16 @@ import java.util.Date;
 @Data
 @Table(name = "jet")
 public class Jet {
+    @SequenceGenerator(
+            name = "jet_id_seq",
+            sequenceName = "jet_sequence",
+            allocationSize = 1
+    )
     @Id
+    @GeneratedValue(
+            strategy = GenerationType.IDENTITY,
+            generator="jet_sequence"
+    )
     private String id;
 
     @ManyToOne

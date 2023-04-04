@@ -7,7 +7,16 @@ import lombok.Data;
 @Data
 @Table(name = "amenity_jet")
 public class AmenityJet {
+    @SequenceGenerator(
+            name = "amenity_jet_id_seq",
+            sequenceName = "amenity_jet_sequence",
+            allocationSize = 1
+    )
     @Id
+    @GeneratedValue(
+            strategy = GenerationType.IDENTITY,
+            generator="amenity_sequence"
+    )
     private String id;
 
     @ManyToOne

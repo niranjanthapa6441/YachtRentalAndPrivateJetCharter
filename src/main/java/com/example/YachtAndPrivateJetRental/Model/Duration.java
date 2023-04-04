@@ -1,9 +1,6 @@
 package com.example.YachtAndPrivateJetRental.Model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 import org.checkerframework.checker.units.qual.C;
 
@@ -11,7 +8,16 @@ import org.checkerframework.checker.units.qual.C;
 @Data
 @Table(name = "duration")
 public class Duration {
+    @SequenceGenerator(
+            name = "duration_id_seq",
+            sequenceName = "duration_sequence",
+            allocationSize = 1
+    )
     @Id
+    @GeneratedValue(
+            strategy = GenerationType.IDENTITY,
+            generator="duration_sequence"
+    )
     private String id;
 
     @Column(nullable = false,unique = true)

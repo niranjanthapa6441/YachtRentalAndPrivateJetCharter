@@ -8,7 +8,16 @@ import lombok.Data;
 @Table(name = "manufacturer")
 public class Manufacturer {
 
+    @SequenceGenerator(
+            name = "manufacturer_id_sequence",
+            sequenceName = "manufacturer_sequence",
+            allocationSize = 1
+    )
     @Id
+    @GeneratedValue(
+            strategy = GenerationType.IDENTITY,
+            generator="manufacturer_sequence"
+    )
     private String id;
 
     @Column(nullable = false,unique = true)

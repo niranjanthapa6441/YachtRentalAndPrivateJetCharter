@@ -1,9 +1,6 @@
 package com.example.YachtAndPrivateJetRental.Model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lombok.Data;
 import org.springframework.stereotype.Service;
 
@@ -11,7 +8,16 @@ import org.springframework.stereotype.Service;
 @Data
 @Service
 public class PackageAmenity {
+    @SequenceGenerator(
+            name = "package_amenity_id_sequence",
+            sequenceName = "package_amenity_sequence",
+            allocationSize = 1
+    )
     @Id
+    @GeneratedValue(
+            strategy = GenerationType.IDENTITY,
+            generator="package_amenity_sequence"
+    )
     private String id;
 
     @ManyToOne

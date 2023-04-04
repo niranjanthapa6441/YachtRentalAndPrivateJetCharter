@@ -7,7 +7,16 @@ import lombok.Data;
 @Entity
 @Table(name = "jet_location")
 public class JetLocation {
+    @SequenceGenerator(
+            name = "jet_location_id_seq",
+            sequenceName = "jet_location_sequence",
+            allocationSize = 1
+    )
     @Id
+    @GeneratedValue(
+            strategy = GenerationType.IDENTITY,
+            generator="jet_location_sequence"
+    )
     private String id;
 
     @Column(nullable = false)

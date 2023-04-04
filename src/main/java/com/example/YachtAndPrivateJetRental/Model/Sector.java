@@ -1,16 +1,22 @@
 package com.example.YachtAndPrivateJetRental.Model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
 @Data
 @Table(name = "sector")
 public class Sector {
+    @SequenceGenerator(
+            name = "sector_id_sequence",
+            sequenceName = "sector_sequence",
+            allocationSize = 1
+    )
     @Id
+    @GeneratedValue(
+            strategy = GenerationType.IDENTITY,
+            generator="sector_sequence"
+    )
     private String id;
 
     @Column(nullable = false)

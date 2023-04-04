@@ -3,6 +3,7 @@ package com.example.YachtAndPrivateJetRental.Model;
 import com.example.YachtAndPrivateJetRental.Enums.ReservationStatus;
 import jakarta.persistence.*;
 import lombok.Data;
+import org.hibernate.annotations.GenericGenerator;
 
 import java.sql.Time;
 import java.time.LocalDate;
@@ -15,6 +16,8 @@ import java.util.Date;
 @Table(name = "reservation")
 public class Reservation {
     @Id
+    @GeneratedValue(generator="system-uuid")
+    @GenericGenerator(strategy = "uuid",name="system-uuid")
     private String id;
 
     @ManyToOne

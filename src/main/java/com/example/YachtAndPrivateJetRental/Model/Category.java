@@ -7,7 +7,16 @@ import lombok.Data;
 @Data
 @Table(name = "category")
 public class Category {
+    @SequenceGenerator(
+            name = "category_id_seq",
+            sequenceName = "category_sequence",
+            allocationSize = 1
+    )
     @Id
+    @GeneratedValue(
+            strategy = GenerationType.IDENTITY,
+            generator="category_sequence"
+    )
     private String id;
 
     @Column(nullable = false,unique = true)
