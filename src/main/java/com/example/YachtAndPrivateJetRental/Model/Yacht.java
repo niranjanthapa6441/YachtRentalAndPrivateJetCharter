@@ -18,7 +18,7 @@ public class Yacht {
             strategy = GenerationType.IDENTITY,
             generator="yacht_sequence"
     )
-    private String id;
+    private int id;
 
     @Column(nullable = false)
     private String name;

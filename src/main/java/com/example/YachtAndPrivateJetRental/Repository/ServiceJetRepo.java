@@ -9,6 +9,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ServiceJetRepo extends JpaRepository<ServiceJet,String> {
+public interface ServiceJetRepo extends JpaRepository<ServiceJet,Integer> {
 
 }

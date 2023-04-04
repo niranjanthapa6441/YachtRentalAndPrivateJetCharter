@@ -18,7 +18,7 @@ public class Manufacturer {
             strategy = GenerationType.IDENTITY,
             generator="manufacturer_sequence"
     )
-    private String id;
+    private int id;
 
     @Column(nullable = false,unique = true)
     private String name;

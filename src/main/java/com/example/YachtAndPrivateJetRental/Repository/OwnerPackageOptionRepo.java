@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 
 
 @Repository
-public interface OwnerPackageOptionRepo extends JpaRepository<OwnerPackageOption,String> {
+public interface OwnerPackageOptionRepo extends JpaRepository<OwnerPackageOption,Integer> {
 
 }

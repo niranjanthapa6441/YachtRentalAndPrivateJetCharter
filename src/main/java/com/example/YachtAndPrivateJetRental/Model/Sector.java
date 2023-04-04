@@ -17,7 +17,7 @@ public class Sector {
             strategy = GenerationType.IDENTITY,
             generator="sector_sequence"
     )
-    private String id;
+    private int id;
 
     @Column(nullable = false)
     private String origin;

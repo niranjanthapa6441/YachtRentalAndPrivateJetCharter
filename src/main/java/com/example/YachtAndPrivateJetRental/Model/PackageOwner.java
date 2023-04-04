@@ -17,7 +17,7 @@ public class PackageOwner {
             strategy = GenerationType.IDENTITY,
             generator="package_owner_sequence"
     )
-    private String id;
+    private int id;
 
     @ManyToOne
     @JoinColumn(name = "owner_id", referencedColumnName = "id", nullable = false)

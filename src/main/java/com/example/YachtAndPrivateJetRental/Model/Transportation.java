@@ -17,7 +17,7 @@ public class Transportation {
             strategy = GenerationType.IDENTITY,
             generator="transportation_type_sequence"
     )
-    private String id;
+    private int id;
 
     private String type;
 }

@@ -17,7 +17,7 @@ public class BaggagePolicy {
             strategy = GenerationType.IDENTITY,
             generator="baggage_policy_sequence"
     )
-    private String id;
+    private int id;
 
     @ManyToOne
     @JoinColumn(name = "owner_id", referencedColumnName = "id", nullable = false)

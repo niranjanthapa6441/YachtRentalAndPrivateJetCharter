@@ -17,7 +17,7 @@ public class JetPrice {
             strategy = GenerationType.IDENTITY,
             generator="jet_price_sequence"
     )
-    private String id;
+    private int id;
 
     @ManyToOne
     @JoinColumn(name = "yacht_id", referencedColumnName = "id", nullable = false)

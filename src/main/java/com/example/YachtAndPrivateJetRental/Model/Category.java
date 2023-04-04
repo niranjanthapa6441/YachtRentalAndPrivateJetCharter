@@ -17,7 +17,7 @@ public class Category {
             strategy = GenerationType.IDENTITY,
             generator="category_sequence"
     )
-    private String id;
+    private int id;
 
     @Column(nullable = false,unique = true)
     private String category;

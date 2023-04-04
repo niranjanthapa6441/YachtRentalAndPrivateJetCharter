@@ -17,7 +17,7 @@ public class Service {
             strategy = GenerationType.IDENTITY,
             generator="service_sequence"
     )
-    private String id;
+    private int id;
 
     @Column(nullable = false,unique = true)
     private String service;

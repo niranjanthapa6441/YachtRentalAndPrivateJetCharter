@@ -9,5 +9,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface OwnerPackageTypeRepo extends JpaRepository<OwnerPackageType,String> {
+public interface OwnerPackageTypeRepo extends JpaRepository<OwnerPackageType,Integer> {
 }

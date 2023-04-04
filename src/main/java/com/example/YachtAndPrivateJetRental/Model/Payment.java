@@ -2,6 +2,7 @@ package com.example.YachtAndPrivateJetRental.Model;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.hibernate.annotations.GenericGenerator;
 
 import java.time.LocalDate;
 
@@ -9,6 +10,9 @@ import java.time.LocalDate;
 @Data
 @Table(name = "payment")
 public class Payment {
+    @Id
+    @GeneratedValue(generator="system-uuid")
+    @GenericGenerator(strategy = "uuid",name="system-uuid")
     private String id;
 
     @Column(nullable = false)

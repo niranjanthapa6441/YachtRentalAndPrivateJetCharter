@@ -17,7 +17,7 @@ public class PackageType {
             strategy = GenerationType.IDENTITY,
             generator="package_type_sequence"
     )
-    private String id;
+    private int id;
 
     @Column(nullable = false,unique = true)
     private String type;

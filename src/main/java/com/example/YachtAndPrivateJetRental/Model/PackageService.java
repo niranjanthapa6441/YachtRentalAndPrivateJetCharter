@@ -17,7 +17,7 @@ public class PackageService {
             strategy = GenerationType.IDENTITY,
             generator="package_service_sequence"
     )
-    private String id;
+    private int id;
 
     @ManyToOne
     @JoinColumn(name = "service_id", referencedColumnName = "id", nullable = false)

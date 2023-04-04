@@ -17,7 +17,7 @@ public class YachtLocation {
             strategy = GenerationType.IDENTITY,
             generator="yacht_location_sequence"
     )
-    private String id;
+    private int id;
 
     @Column(nullable = false)
     private String address;

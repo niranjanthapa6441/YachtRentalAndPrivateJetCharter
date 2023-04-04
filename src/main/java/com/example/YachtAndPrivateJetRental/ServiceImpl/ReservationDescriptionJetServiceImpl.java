@@ -1,9 +1,9 @@
 package com.example.YachtAndPrivateJetRental.ServiceImpl;
 
-import com.example.YachtAndPrivateJetRental.Service.ReservationDescriptionJetService;
+import com.example.YachtAndPrivateJetRental.Service.ReservationItineraryService;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ReservationDescriptionJetServiceImpl implements ReservationDescriptionJetService {
+public class ReservationDescriptionJetServiceImpl implements ReservationItineraryService {
 
 }

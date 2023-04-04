@@ -17,7 +17,7 @@ public class AmenityJet {
             strategy = GenerationType.IDENTITY,
             generator="amenity_sequence"
     )
-    private String id;
+    private int id;
 
     @ManyToOne
     @JoinColumn(name = "jet_id", referencedColumnName = "id",nullable = false)

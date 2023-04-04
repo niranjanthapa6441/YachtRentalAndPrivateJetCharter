@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface PackageYachtRepo extends JpaRepository<PackageYacht,String> {
+public interface PackageYachtRepo extends JpaRepository<PackageYacht,Integer> {
 }

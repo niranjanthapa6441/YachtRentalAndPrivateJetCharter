@@ -9,5 +9,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface PackageServiceRepo extends JpaRepository<PackageService,String >{
+public interface PackageServiceRepo extends JpaRepository<PackageService,Integer>{
 }

@@ -9,6 +9,6 @@ import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 @Repository
-public interface PackageAmenityRepo extends JpaRepository<PackageAmenity, String> {
+public interface PackageAmenityRepo extends JpaRepository<PackageAmenity, Integer> {
 
 }

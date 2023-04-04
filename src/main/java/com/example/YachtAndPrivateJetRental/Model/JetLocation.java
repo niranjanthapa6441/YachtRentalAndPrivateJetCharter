@@ -17,7 +17,7 @@ public class JetLocation {
             strategy = GenerationType.IDENTITY,
             generator="jet_location_sequence"
     )
-    private String id;
+    private int id;
 
     @Column(nullable = false)
     private String address;

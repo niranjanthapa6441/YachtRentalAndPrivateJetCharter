@@ -17,7 +17,7 @@ public class User {
             strategy = GenerationType.IDENTITY,
             generator="user_sequence"
     )
-    private String id;
+    private int id;
 
     @Column(nullable = false,unique = true)
     private String username;

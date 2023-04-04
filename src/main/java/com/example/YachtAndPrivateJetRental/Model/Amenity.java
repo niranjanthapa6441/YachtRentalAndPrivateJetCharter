@@ -17,7 +17,7 @@ public class Amenity {
             strategy = GenerationType.IDENTITY,
             generator="amenity_sequence"
     )
-    private String id;
+    private int id;
 
     @Column(nullable = false)
     private String amenity;

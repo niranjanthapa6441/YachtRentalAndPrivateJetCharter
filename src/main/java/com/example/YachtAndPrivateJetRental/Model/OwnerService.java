@@ -17,7 +17,7 @@ public class OwnerService {
             strategy = GenerationType.IDENTITY,
             generator="owner_service_sequence"
     )
-    private String id;
+    private int id;
 
     @ManyToOne
     @JoinColumn(name = "owner_id", referencedColumnName = "id", nullable = false)

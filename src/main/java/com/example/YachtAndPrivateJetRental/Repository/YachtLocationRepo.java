@@ -9,6 +9,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface YachtLocationRepo extends JpaRepository<YachtLocation, String> {
+public interface YachtLocationRepo extends JpaRepository<YachtLocation, Integer> {
 
 }

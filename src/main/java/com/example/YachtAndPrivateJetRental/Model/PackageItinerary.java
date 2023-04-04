@@ -17,7 +17,7 @@ public class PackageItinerary {
             strategy = GenerationType.IDENTITY,
             generator="package_itinerary_sequence"
     )
-    private String id;
+    private int id;
 
     @ManyToOne
     @JoinColumn(name = "package_id", referencedColumnName = "id", nullable = false)

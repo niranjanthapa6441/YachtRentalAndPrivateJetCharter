@@ -17,7 +17,7 @@ public class CharterType {
             strategy = GenerationType.IDENTITY,
             generator="charter_type_sequence"
     )
-    private String id;
+    private int id;
 
     private String charterType;
 }

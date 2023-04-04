@@ -17,7 +17,7 @@ public class CancellationPolicy {
             strategy = GenerationType.IDENTITY,
             generator="cancellation_policy_sequence"
     )
-    private String id;
+    private int id;
 
     @ManyToOne
     @JoinColumn(name = "owner_id", referencedColumnName = "id", nullable = false)

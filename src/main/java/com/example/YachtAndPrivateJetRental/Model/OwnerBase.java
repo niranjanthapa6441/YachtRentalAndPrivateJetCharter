@@ -17,7 +17,7 @@ public class OwnerBase {
             strategy = GenerationType.IDENTITY,
             generator="owner_base_sequence"
     )
-    private String id;
+    private int id;
 
     @Column(nullable = false)
     private String address;

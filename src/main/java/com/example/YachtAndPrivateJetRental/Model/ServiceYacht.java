@@ -17,7 +17,7 @@ public class ServiceYacht {
             strategy = GenerationType.IDENTITY,
             generator="service_yacht_sequence"
     )
-    private String id;
+    private int id;
 
     @ManyToOne
     @JoinColumn(name = "yacht_id", referencedColumnName = "id",nullable = false)

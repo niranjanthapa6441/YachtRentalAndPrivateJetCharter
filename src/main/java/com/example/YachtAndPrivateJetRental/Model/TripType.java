@@ -17,7 +17,7 @@ public class TripType {
             strategy = GenerationType.IDENTITY,
             generator="trip_type_sequence"
     )
-    private String id;
+    private int id;
 
     @Column(nullable = false,unique = true)
     private String tripType;

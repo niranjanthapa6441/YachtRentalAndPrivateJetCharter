@@ -17,7 +17,7 @@ public class ImagePackage {
             strategy = GenerationType.IDENTITY,
             generator="image_package_sequence"
     )
-    private String id;
+    private int id;
     @ManyToOne
     @JoinColumn(name = "package_id", referencedColumnName = "id",nullable = false)
     private  Package aPackage;

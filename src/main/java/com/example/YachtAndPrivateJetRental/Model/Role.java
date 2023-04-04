@@ -1,5 +1,6 @@
 package com.example.YachtAndPrivateJetRental.Model;
 
+import com.example.YachtAndPrivateJetRental.Enums.ERole;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -17,5 +18,26 @@ public class Role {
             strategy = GenerationType.IDENTITY,
             generator="user_role_sequence"
     )
-    private String id;
+    private int id;
+
+    @Enumerated(EnumType.STRING)
+    @Column(length = 20)
+    private ERole name;
+    public Role() {
+    }
+    public Role(ERole name) {
+        this.name = name;
+    }
+    public Integer getId() {
+        return id;
+    }
+    public void setId(Integer id) {
+        this.id = id;
+    }
+    public ERole getName() {
+        return name;
+    }
+    public void setName(ERole name) {
+        this.name = name;
+    }
 }

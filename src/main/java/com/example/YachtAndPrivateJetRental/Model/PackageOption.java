@@ -18,7 +18,7 @@ public class PackageOption {
             strategy = GenerationType.IDENTITY,
             generator="package_option_sequence"
     )
-    private String id;
+    private int id;
 
     @Column(nullable = false,unique = true)
     private String option;

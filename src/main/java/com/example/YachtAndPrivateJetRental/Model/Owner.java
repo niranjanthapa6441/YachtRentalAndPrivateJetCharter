@@ -19,7 +19,7 @@ public class Owner {
             strategy = GenerationType.IDENTITY,
             generator="owner_sequence"
     )
-    private String id;
+    private int id;
 
     @Column(nullable = false)
     private String name;

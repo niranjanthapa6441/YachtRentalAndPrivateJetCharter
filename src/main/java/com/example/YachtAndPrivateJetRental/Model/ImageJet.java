@@ -17,7 +17,7 @@ public class ImageJet {
             strategy = GenerationType.IDENTITY,
             generator="image_jet_sequence"
     )
-    private String id;
+    private int id;
 
     @ManyToOne
     @JoinColumn(name = "jet_id", referencedColumnName = "id",nullable = false)
