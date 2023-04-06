@@ -24,7 +24,7 @@ public class OwnerService {
     private Owner owner;
     @ManyToOne
     @JoinColumn(name = "service_id", referencedColumnName = "id", nullable = false)
-    private Service service;
+    private Services services;
 
     @Column(nullable = false)
     private double price;

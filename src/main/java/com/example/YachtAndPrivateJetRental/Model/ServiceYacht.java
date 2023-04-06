@@ -25,5 +25,5 @@ public class ServiceYacht {
 
     @ManyToOne
     @JoinColumn(name = "service_id", referencedColumnName = "id",nullable = false)
-    private Service service;
+    private Services services;
 }

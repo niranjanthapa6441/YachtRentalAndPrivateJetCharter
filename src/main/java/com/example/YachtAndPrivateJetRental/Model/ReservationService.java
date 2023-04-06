@@ -15,7 +15,7 @@ public class ReservationService {
 
     @ManyToOne
     @JoinColumn(name = "service_id", referencedColumnName = "id", nullable = false)
-    private Service service;
+    private Services services;
 
     @ManyToOne
     @JoinColumn(name = "reservation_id", referencedColumnName = "id", nullable = false)

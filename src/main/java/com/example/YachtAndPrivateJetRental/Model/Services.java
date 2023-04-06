@@ -6,7 +6,7 @@ import lombok.Data;
 @Data
 @Table
 @Entity
-public class Service {
+public class Services {
     @SequenceGenerator(
             name = "service_id_sequence",
             sequenceName = "service_sequence",

@@ -4,6 +4,7 @@ import com.example.YachtAndPrivateJetRental.Enums.FleetStatus;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -28,9 +29,12 @@ public class Jet {
     @Column(nullable = false)
     private int capacity;
     @Column(nullable = false)
-    private Date manufacturedDate;
+    private LocalDate  manufacturedDate;
     @Column(nullable = false)
     private double maximumRange;
+
+    @Column(nullable = false, unique = true)
+    private String name;
     @Column(nullable = false)
     private double altitude;
 

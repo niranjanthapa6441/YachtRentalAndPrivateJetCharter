@@ -21,7 +21,7 @@ public class PackageService {
 
     @ManyToOne
     @JoinColumn(name = "service_id", referencedColumnName = "id", nullable = false)
-    private Service service;
+    private Services services;
     @ManyToOne
     @JoinColumn(name = "package_id", referencedColumnName = "id", nullable = false)
     private Package aPackage;
