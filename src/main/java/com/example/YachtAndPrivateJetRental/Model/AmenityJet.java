@@ -26,6 +26,4 @@ public class AmenityJet {
     @ManyToOne
     @JoinColumn(name = "amenity_id", referencedColumnName = "id",nullable = false)
     private  Amenity amenity;
-
-
 }

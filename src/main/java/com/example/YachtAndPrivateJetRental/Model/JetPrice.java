@@ -20,10 +20,11 @@ public class JetPrice {
     private int id;
 
     @ManyToOne
-    @JoinColumn(name = "yacht_id", referencedColumnName = "id", nullable = false)
-    private Yacht yacht;
-    @Column(nullable = false)
-    private double distanceTravelled;
+    @JoinColumn(name = "jet_id", referencedColumnName = "id", nullable = false)
+    private Jet jet;
+    @ManyToOne
+    @JoinColumn(name = "duration_id", referencedColumnName = "id", nullable = false)
+    private Duration duration;
     @Column(nullable = false)
     private double price;
 

@@ -30,10 +30,6 @@ public class Package {
 
     @Column(name = "package_description", nullable = false, columnDefinition = "text")
     private String packageDescription;
-
-    @ManyToOne
-    @JoinColumn(name = "package_option_id", referencedColumnName = "id", nullable = false)
-    private PackageOption packageOption;
     @ManyToOne
     @JoinColumn(name = "package_type_id", referencedColumnName = "id", nullable = false)
     private PackageType packageType;

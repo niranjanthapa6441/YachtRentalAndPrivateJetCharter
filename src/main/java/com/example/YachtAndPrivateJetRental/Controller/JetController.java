@@ -24,12 +24,17 @@ public class JetController {
     public static final String PAGE = "1";
     public static final String MESSAGE = "Successful";
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Object> categories(
+    public ResponseEntity<Object> jets(
             @RequestParam(required = false) String category,
             @RequestParam(defaultValue = PAGE) int page,
-            @RequestParam(defaultValue = SIZE) int size
+            @RequestParam(defaultValue = SIZE) int size,
+            @RequestParam(required = false) String ownerName,
+            @RequestParam(required = false) String sortByManufacturedYear,
+            @RequestParam(required = false) String manufacturer,
+            @RequestParam(required =false) String jetName
+
     ){
-        return RestResponse.ok(service.findAll(),MESSAGE);
+        return RestResponse.ok(service.findAll(category, ownerName, jetName, manufacturer, sortByManufacturedYear, page, size),MESSAGE);
     }
     @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE,consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Object> save(

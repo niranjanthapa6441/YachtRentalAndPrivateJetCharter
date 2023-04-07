@@ -27,6 +27,11 @@ public class CustomException extends RuntimeException {
         USERNAME_ALREADY_EXIST("Username already Exists", 500),
         INVALID_FILE_EXTENSION("Image Extension Should be of .png, .jpeg or .jpg",400 ),
         INVALID_MIME_TYPE("Invalid MIMEType",400),
+
+        INVALID_IMAGE_REQUEST("The images for jet should not be empty",400),
+
+        INVALID_JET_PRICE_REQUEST("The Jet should have at least one price",400),
+
         INVALID_FILE_SIZE("Upload file fize shouldn't be more than 3MB",400 );
         private String message;
         private int code;

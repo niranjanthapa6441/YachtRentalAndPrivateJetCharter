@@ -33,4 +33,12 @@ public class JetRequest {
     List<String> amenities;
 
     List<String> services;
+
+    List<JetPriceDurationRequest> jetPricing;
+
+    private String address;
+
+    private String lat;
+    private String lon;
+
 }

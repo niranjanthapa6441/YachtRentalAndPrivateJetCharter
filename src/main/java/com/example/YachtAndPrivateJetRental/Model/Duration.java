@@ -21,5 +21,5 @@ public class Duration {
     private int id;
 
     @Column(nullable = false,unique = true)
-    private String Duration;
+    private String duration;
 }

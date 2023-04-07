@@ -1,6 +1,6 @@
 package com.example.YachtAndPrivateJetRental.Service;
 
-import com.example.YachtAndPrivateJetRental.DTO.JetDetailsDTO;
+import com.example.YachtAndPrivateJetRental.DTO.JetDetailsDTOList;
 import com.example.YachtAndPrivateJetRental.Request.JetRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -16,5 +16,5 @@ public interface JetService {
 
     public String delete(int id);
 
-    public JetDetailsDTO findAll();
+    public JetDetailsDTOList findAll(String category, String ownerName, String jetName, String manufacturer, String sortByManufacturedYear, int page, int size);
 }
